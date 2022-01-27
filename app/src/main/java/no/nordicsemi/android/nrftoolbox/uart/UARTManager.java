@@ -78,6 +78,7 @@ public class UARTManager extends LoggableBleManager<UARTManagerCallbacks> {
 						mCallbacks.onDataReceived(device, text);
 					});
 			requestMtu(260).enqueue();
+
 			enableNotifications(txCharacteristic).enqueue();
 		}
 
